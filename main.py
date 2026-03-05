@@ -1,9 +1,11 @@
+from datetime import date, time
+from typing import Optional
+
 from fastapi import FastAPI
 from pydantic import BaseModel, Field
 
 
-
-# Lista donde se guardan  reservas 
+# Lista donde se guardan las reservas 
 reservas: list["Reserva"] = []
 
 
