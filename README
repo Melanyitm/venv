@@ -1,0 +1,6 @@
+1. Clone Repositorio
+2. cd venv
+3. python -m venv venv
+4. source venv/scripts/activate
+5. pip install -r requirements.texto
+6. uvicorn main:app --reload
