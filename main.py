@@ -42,3 +42,7 @@ def registrar_reserva(reserva: Reserva) -> Reserva:
 
     return reserva
 
+@app.get("/reservas", response_model=list[Reserva])
+def consultar_reservas() -> list[Reserva]:
+    """Consulta todas las reservas registradas."""
+    return reservas
