@@ -1,0 +1,105 @@
+{
+  "casos_validos": [
+    {
+      "id_sala": "SALA-101",
+      "id_usuario": "USR-001",
+      "fecha": "2025-03-10",
+      "hora_inicio": "08:00",
+      "hora_fin": "10:00",
+      "personas": 25,
+      "estado": "confirmada"
+    },
+    {
+      "id_sala": "SALA-202",
+      "id_usuario": "USR-002",
+      "fecha": "2025-03-11",
+      "hora_inicio": "14:30",
+      "hora_fin": "16:30",
+      "personas": 15,
+      "estado": "pendiente"
+    },
+    {
+      "id_reserva": "RES-0001",
+      "id_sala": "AUDITORIO-A",
+      "id_usuario": "USR-003",
+      "fecha": "2025-03-15",
+      "hora_inicio": "09:00:00",
+      "hora_fin": "12:00:00",
+      "personas": 100,
+      "estado": "confirmada"
+    }
+  ],
+  "casos_invalidos": [
+    {
+      "descripcion": "Campo id_sala vacío",
+      "datos": {
+        "id_sala": "",
+        "id_usuario": "USR-001",
+        "fecha": "2025-03-10",
+        "hora_inicio": "08:00",
+        "hora_fin": "10:00",
+        "personas": 25,
+        "estado": "confirmada"
+      }
+    },
+    {
+      "descripcion": "personas con valor 0 (debe ser >= 1)",
+      "datos": {
+        "id_sala": "SALA-101",
+        "id_usuario": "USR-001",
+        "fecha": "2025-03-10",
+        "hora_inicio": "08:00",
+        "hora_fin": "10:00",
+        "personas": 0,
+        "estado": "confirmada"
+      }
+    },
+    {
+      "descripcion": "Formato de fecha incorrecto",
+      "datos": {
+        "id_sala": "SALA-101",
+        "id_usuario": "USR-001",
+        "fecha": "10-03-2025",
+        "hora_inicio": "08:00",
+        "hora_fin": "10:00",
+        "personas": 25,
+        "estado": "confirmada"
+      }
+    },
+    {
+      "descripcion": "Campo obligatorio faltante (id_usuario)",
+      "datos": {
+        "id_sala": "SALA-101",
+        "fecha": "2025-03-10",
+        "hora_inicio": "08:00",
+        "hora_fin": "10:00",
+        "personas": 25,
+        "estado": "confirmada"
+      }
+    },
+    {
+      "descripcion": "Tipo incorrecto: personas como texto",
+      "datos": {
+        "id_sala": "SALA-101",
+        "id_usuario": "USR-001",
+        "fecha": "2025-03-10",
+        "hora_inicio": "08:00",
+        "hora_fin": "10:00",
+        "personas": "veinticinco",
+        "estado": "confirmada"
+      }
+    },
+    {
+      "descripcion": "personas negativo",
+      "datos": {
+        "id_sala": "SALA-101",
+        "id_usuario": "USR-001",
+        "fecha": "2025-03-10",
+        "hora_inicio": "08:00",
+        "hora_fin": "10:00",
+        "personas": -5,
+        "estado": "confirmada"
+      }
+    }
+  ]
+}
